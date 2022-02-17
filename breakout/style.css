@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+  }
+  
+body{
+    background-color: #0095dd;
+    display: flex;
+    /* 设置弹性盒子 */
+    flex-direction: column;
+    /* 列布局 */
+    align-items: center;
+    /* align-items属性定义项目在交叉轴(垂直轴)居中对齐 */
+    justify-content: center;
+    /* justify-content属性定义了项目在主轴(水平轴)上居中对齐 */
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    /* 设定最小高度 */
+    margin: 0;
+}
+
+h1{
+    font-size: 45px;
+    color: white;
+}
+
+.btn{
+    cursor: pointer;
+    border: 0;
+    padding: 10px,20px;
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* 按钮动画效果 */
+.btn:focus {
+    outline: 0;
+}
+  
+.btn:hover {
+    /* 悬停样式 */
+    background: #222;
+  }
+  
+.btn:active {
+    /* 点击 */
+    transform: scale(0.98);
+}
+
+.rule-btn{
+    /* 相对与body定位 */
+    position: absolute;        
+    top: 30px;
+    left: 30px;
+    /* 需要设置定位才能用 */
+
+    width: 120px;
+    height: 40px;
+}
+
+.show_rule{
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* 设置定位 */
+    background: #333;
+    color: #fff;
+    width: 400px;
+    min-height: 100vh;
+    line-height: 1.5;
+    padding: 20px;
+
+    /* 动画效果 */
+    transform: translateX(-400px); 
+    transition: transform 1s ease-in-out;
+}
+
+.show_rule.show {
+    transform: translateX(0);
+}
+
+canvas{
+    background: #f0f0f0;
+    display: block;
+    border-radius: 5px;
+}
